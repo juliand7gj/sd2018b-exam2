@@ -1,0 +1,28 @@
+version: '3'
+services:
+    registry.icesi.edu.co:
+        image: registry:2
+        container_name: registry.icesi.edu.co
+        volumes:
+            - './docker_data/certs:/certs'
+        environment:
+            - 'REGISTRY_HTTP_ADDR=0.0.0.0:443'
+            - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt
+            - REGISTRY_HTTP_TLS_KEY=/certs/domain.key
+        ports:
+            - '443:443'
+    ci_server:
+        build: ci_server
+        container_name: ci_server
+        environment:
+            - 'CI_SERVER_HTTP_ADDR=0.0.0.0:8080'
+        ports:
+            - '8080:8080'
+    ngrok:
+        image: wernight/ngrok
+        ports:
+            - 0.0.0.0:4040:4040
+        links:
+            - ci_server
+        environment:
+            NGROK_PORT: ci_server:8080

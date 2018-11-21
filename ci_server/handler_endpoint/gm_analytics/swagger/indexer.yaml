@@ -1,0 +1,35 @@
+swagger: '2.0'
+
+info:
+  title: User API
+  version: "0.1.0"
+
+paths:
+  /ciserver/repository/merged:
+    post:
+      x-swagger-router-controller: gm_analytics
+      operationId: handlers.repository_merged
+      summary: The repository has changed..
+      responses:
+        200:
+          description: Successful response.
+          schema:
+            type: object
+            properties:
+              command_return:
+                type: string
+                description: User information
+  /:
+    post:
+      x-swagger-router-controller: gm_analytics
+      operationId: handlers.hello
+      summary: The repository has changed..
+      responses:
+        200:
+          description: Successful response.
+          schema:
+            type: object
+            properties:
+              command_return:
+                type: string
+                description: User information
