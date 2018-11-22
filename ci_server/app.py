@@ -7,8 +7,8 @@ import socket
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    html = "<h3>Hello!</h3>"
+def inicio():
+    html = "<h3>Funciona</h3>"
     return html
 
 @app.route("/jgonzalez/exam2/api/v1/images", methods=['POST'])

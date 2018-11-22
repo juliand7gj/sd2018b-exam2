@@ -1,5 +1,11 @@
 version: "3"
 services:
+  ci_server:
+    build: ./ci_server
+    ports:
+      - 8000:8000
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
   ngrok:
     image: wernight/ngrok
     ports:
@@ -8,12 +14,6 @@ services:
       - ci_server
     environment:
       NGROK_PORT: ci_server:8000
-  ci_server:
-    build: ./ci_server
-    ports:
-      - 8000:8000
-    volumes:
-      - //var/run/docker.sock:/var/run/docker.sock
   registry:
     restart: always
     image: registry:2
