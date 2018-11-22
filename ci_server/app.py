@@ -11,7 +11,7 @@ def hello():
     html = "<h3>Hello!</h3>"
     return html
 
-@app.route("/abueno/exam2/api/v1/images", methods=['POST'])
+@app.route("/jgonzalez/exam2/api/v1/images", methods=['POST'])
 def build_image():
     content=request.get_data()
     contentString=str(content, 'utf-8')
