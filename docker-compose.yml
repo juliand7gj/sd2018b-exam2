@@ -7,11 +7,11 @@ services:
     links:
       - ci_server
     environment:
-      NGROK_PORT: ci_server:80
+      NGROK_PORT: ci_server:8000
   ci_server:
     build: ./ci_server
     ports:
-      - 80:80
+      - 8000:8000
     volumes:
       - //var/run/docker.sock:/var/run/docker.sock
   registry:
