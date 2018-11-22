@@ -1,13 +1,13 @@
 ### sd2018b-exam2
 
-**Universidad Icesi**
-**Curso:** Sistemas Distribuidos
-**Profesor:** Daniel Barragán C.
-**Tema:** Construcción de artefactos para entrega continua
-**Email:** daniel.barragan at correo.icesi.edu.co
-**Estudiante:** Julián David González Jiménez
-**ódigo:** A00315288
-**URL Git:** https://github.com/juliand7gj/sd2018b-exam2
+**Universidad Icesi**  
+**Curso:** Sistemas Distribuidos  
+**Profesor:** Daniel Barragán C.  
+**Tema:** Construcción de artefactos para entrega continua  
+**Email:** daniel.barragan at correo.icesi.edu.co  
+**Estudiante:** Julián David González Jiménez  
+**ódigo:** A00315288  
+**URL Git:** https://github.com/juliand7gj/sd2018b-exam2  
 
 ### Objetivos
 * Realizar de forma autómatica la generación de artefactos para entrega continua
@@ -65,7 +65,7 @@ La rama actual contiene dos elementos clave para implementar la infraestructura.
 
 ### Desarrollo
 
-## docker-compose.yml
+#### docker-compose.yml
 
 ```
 version: "3"
@@ -219,20 +219,20 @@ Ya estando todo activo, debemos ir al repositorio y añadir un webhook. En el se
 ![][7]
 **Figura 8**. Webhook
 
-![][8]
+![][8]  
 **Figura 9**. webhook
 
 Ahora ya se puede probar haciendo PR de la rama jgonzalez/develop a la rama develop:
 
-![][9]
+![][9]  
 **Figura 10**. Pull Request
 
-![][10]
+![][10]  
 **Figura 11**. Webhook trabajando
 
 Al final se debe hacer merge sin ningun problema.
 
-![][11]
+![][11]  
 **Figura 12**. Merge
 
 ### Dificultades
